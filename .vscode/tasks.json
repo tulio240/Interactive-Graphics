@@ -10,8 +10,10 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I${workspaceFolder}/include",
-                "-L${workspaceFolder}/lib"
+                "-I${workspaceFolder}\\include",
+                "-L${workspaceFolder}\\lib",
+                "${workspaceFolder}/src/glad.c",
+                "-lglfw3dll",
             ],
             "options": {
                 "cwd": "C:\\msys64\\ucrt64\\bin"
