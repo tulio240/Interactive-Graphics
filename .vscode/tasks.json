@@ -10,7 +10,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I${workspaceFolder}\\include",
+                "-I${workspaceFolder}//include",
+                "-I${workspaceFolder}//include//header_files",
                 "${workspaceFolder}/src/glad.c",
             ],
             "options": {
