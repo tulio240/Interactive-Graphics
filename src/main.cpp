@@ -3,10 +3,10 @@
 #include<GLFW/glfw3.h>
 #include<math.h>
 
-#include"shaderClass.h"
-#include"VAO.h"
-#include"VBO.h"
-#include"EBO.h"
+#include"shaderClass.hpp"
+#include"VAO.hpp"
+#include"VBO.hpp"
+#include"EBO.hpp"
 
 
 
@@ -58,16 +58,13 @@ int main()
 
 	//Load GLAD so it configures OpenGL
 	gladLoadGL();
+
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 	glViewport(0, 0, 800, 800);
 
-
-
-	// Generates Shader object using shaders defualt.vert and default.frag
+	// Generates Shader object using shaders default.vert and default.frag
 	Shader shaderProgram("default.vert", "default.frag");
-
-
 
 	// Generates Vertex Array Object and binds it
 	VAO VAO1;
@@ -84,8 +81,6 @@ int main()
 	VAO1.Unbind();
 	VBO1.Unbind();
 	EBO1.Unbind();
-
-
 
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
@@ -117,5 +112,6 @@ int main()
 	glfwDestroyWindow(window);
 	// Terminate GLFW before ending the program
 	glfwTerminate();
+
 	return 0;
 }
